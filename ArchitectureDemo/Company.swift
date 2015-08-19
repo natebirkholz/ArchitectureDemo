@@ -20,10 +20,6 @@ class Company {
     self.catchPhrase = catchPhrase
     self.bs = bs
   }
-}
+    
+} // End
 
-//"company": {
-//    "name": "Romaguera-Crona",
-//    "catchPhrase": "Multi-layered client-server neural-net",
-//    "bs": "harness real-time e-markets"
-//  }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43CC34731B83EE7B00A6A8C2 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CC34721B83EE7B00A6A8C2 /* NetworkController.swift */; };
+		43CC34751B83EE9900A6A8C2 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CC34741B83EE9900A6A8C2 /* JsonParser.swift */; };
 		43FA26231B7FCFC10061D2D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FA26221B7FCFC10061D2D8 /* AppDelegate.swift */; };
 		43FA26261B7FCFC10061D2D8 /* ArchitectureDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43FA26241B7FCFC10061D2D8 /* ArchitectureDemo.xcdatamodeld */; };
 		43FA26281B7FCFC10061D2D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FA26271B7FCFC10061D2D8 /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		43CC34721B83EE7B00A6A8C2 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		43CC34741B83EE9900A6A8C2 /* JsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		43FA261D1B7FCFC10061D2D8 /* ArchitectureDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArchitectureDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43FA26211B7FCFC10061D2D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43FA26221B7FCFC10061D2D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 				43FA26471B7FE1270061D2D8 /* Address.swift */,
 				43FA264B1B7FE4C80061D2D8 /* GeoCode.swift */,
 				43FA264D1B7FF0DA0061D2D8 /* Company.swift */,
+				43CC34721B83EE7B00A6A8C2 /* NetworkController.swift */,
+				43CC34741B83EE9900A6A8C2 /* JsonParser.swift */,
 			);
 			path = ArchitectureDemo;
 			sourceTree = "<group>";
@@ -236,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43CC34731B83EE7B00A6A8C2 /* NetworkController.swift in Sources */,
 				43FA26461B7FDED60061D2D8 /* DataObject.swift in Sources */,
 				43FA26281B7FCFC10061D2D8 /* ViewController.swift in Sources */,
 				43FA26231B7FCFC10061D2D8 /* AppDelegate.swift in Sources */,
@@ -243,6 +250,7 @@
 				43FA264E1B7FF0DA0061D2D8 /* Company.swift in Sources */,
 				43FA26481B7FE1270061D2D8 /* Address.swift in Sources */,
 				43FA264C1B7FE4C80061D2D8 /* GeoCode.swift in Sources */,
+				43CC34751B83EE9900A6A8C2 /* JsonParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +448,7 @@
 				43FA26411B7FCFC10061D2D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43FA26421B7FCFC10061D2D8 /* Build configuration list for PBXNativeTarget "ArchitectureDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +457,7 @@
 				43FA26441B7FCFC10061D2D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

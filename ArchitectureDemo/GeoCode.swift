@@ -30,4 +30,4 @@ class GeoCode {
     self.location = locationFor
   }
   
-}
+} // End

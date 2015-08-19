@@ -27,5 +27,5 @@ class Address {
     let geoFor = GeoCode(id: id, lat: lat, lon: lon)
   }
   
-}
+} // End
 
