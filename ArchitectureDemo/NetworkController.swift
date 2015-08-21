@@ -25,35 +25,12 @@ class NetworkController {
     }
     
     func getJSONForPerson(person: Person, completionHandler : (data: NSData) ->(Void)) {
-        self.networkQueue.addOperationWithBlock { () -> Void in
-            let idString =  String(person.idFor)
-            let requestString = self.apiURL + idString
-            
-            let fetchUrl = NSURL(string: requestString)
-            let fetchSession = NSURLSession.sharedSession()
-            var request = NSMutableURLRequest(URL: fetchUrl!)
-            request.HTTPMethod = "GET"
-            
-            let dataTask = fetchSession.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
-                let dataFromRequest = data as NSData
-                if let httpResponse = response as! NSHTTPURLResponse {
-                    
-                }
-            })
-        }
-//        self.fetchJSONFromURL(self.apiURL, completionHandler: { (dataFromURL) -> (Void) in
-//            let parser = JsonParser()
-//            var forecasts = parser.parseJSONIntoForecasts(dataFromURL)
-//            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-//                completionHandler(forecasts: forecasts)
-//            })
-//        })
-    }
-    
-    func fetchJSONFromURL(aURL: String, completionHandler : (dataFromURL: NSData) -> (Void)) {
-        let fetchURL = NSURL(string: aURL)
+        let idString =  String(person.idFor)
+        let requestString = self.apiURL + idString
+        
+        let fetchUrl = NSURL(string: requestString)
         let fetchSession = NSURLSession.sharedSession()
-        let request = NSMutableURLRequest(URL: fetchURL!)
+        var request = NSMutableURLRequest(URL: fetchUrl!)
         request.HTTPMethod = "GET"
         
         let dataTask = fetchSession.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
@@ -61,16 +38,21 @@ class NetworkController {
             if let httpResponse = response as? NSHTTPURLResponse {
                 switch httpResponse.statusCode {
                 case 200:
-                    completionHandler(dataFromURL: dataFromRequest)
+                    completionHandler(data: dataFromRequest)
                 default:
-                    println("ERROR: Bad response")
-                    completionHandler(dataFromURL: dataFromRequest)
+                    println("Error: Bad response: \(httpResponse.statusCode)")
+                    let nilData = NSData()
+                    completionHandler(data: nilData)
+                    // Be sure to check length of return!!!
                 }
             } else {
                 println("NO RESPONSE------")
+                let nilData = NSData()
+                completionHandler(data: nilData)
             }
         })
         dataTask.resume()
     }
+    
     
 } // End

@@ -10,6 +10,21 @@ import Foundation
 
 class JsonParser {
     
+    var jsonQueue = NSOperationQueue()
+    
+    
+    class var sharedInstance : JsonParser {
+        struct Static {
+            static let instance : JsonParser = JsonParser()
+        }
+        return Static.instance
+    }
+    
+    init() {
+        self.jsonQueue.maxConcurrentOperationCount = 6
+    }
+    
+    
     func parseJSONIntoForecasts(rawJSONData: NSData) -> [Forecast] {
         var error : NSError?
         
